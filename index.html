@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="scripts.js"></script>
+
+</head>
+
+
+<body ng-app="myApp">
+    {{ 144/12 }}
+    <div ng-controller="firstController">
+        <p>{{message}}</p>
+    </div>
+    <hr>
+    <div ng-controller="MainController">
+        <p>{{message}}</p>
+        <h2>Hello {{candidate.firstName}} {{candidate.lastName}}!!</h2>
+
+        <img ng-src=" {{candidate.Imagesrc}} " title="{{candidate.firstName}} {{candidate.lastName}} ">
+
+    </div>
+    <hr>
+
+
+</body>
+
+</html>
