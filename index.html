@@ -33,6 +33,20 @@
         <p>HEY {{user.name}} !!! Greetings from Github API!!!</p>
         <div>{{error}}</div>
         <img ng-src=" {{user.avatar_url}} " title="{{user.name}} ">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>stars</th>
+                <th>Language</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="repo in repos">
+                    <td>{{repo.name}}</td>
+                    <td>{{repo.stargazers_count}}</td>
+                    <td>{{repo.language}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
