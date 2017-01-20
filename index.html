@@ -23,7 +23,17 @@
 
     </div>
     <hr>
+    <div ng-controller="GithubController">
+    {{username}}
+    <form name="searchUser">
+        <input type="text" placeholder="Enter username" ng-model="username">
+        <input type="submit" value="search">
 
+    </form>
+    <p>HEY {{user.name}} !!! Greetings from Github API!!!</p>
+    <div>{{error}}</div>
+    <img ng-src=" {{user.avatar_url}} " title="{{user.name}} ">
+</div>
 
 </body>
 
