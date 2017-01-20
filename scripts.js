@@ -41,9 +41,12 @@ app.controller('GithubController', function ($scope, $http) {
         $scope.user = response.data;
     }
     var ifError = function (reason) {
-        $scope.error = reason;
+        $scope.error = "Could not find user";
     }
-    $http.get("https://api.github.com/users/angular").then(ifSucess, ifError);
+    $scope.search = function (username) {
+        $http.get("https://api.github.com/users/" + username).then(ifSucess, ifError);
+    }
+
     $scope.username = "angular"
     $scope.message = "Github Users";
 
