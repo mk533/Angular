@@ -1,4 +1,4 @@
-<p>HEY {{user.name}} !!! Greetings from Github API!!!</p>
+<p>HEY {{user.name}} !!! Greetings from Github!!</p>
 <div>{{error}}
     <img ng-src=" {{user.avatar_url}} " title="{{user.name}} ">
 
@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             <tr ng-repeat="repo in repos ">
-                <td>{{repo.name}}</td>
+                <td><a href="/#/repo/{{user.login}}/{{repo.name}}">{{repo.name}}</a></td>
                 <td>{{repo.stargazers_count}}</td>
                 <td>{{repo.language}}</td>
             </tr>
